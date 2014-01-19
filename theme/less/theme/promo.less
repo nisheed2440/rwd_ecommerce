@@ -1,0 +1,110 @@
+.nrwd-promo{
+	padding:5px 0;
+	width:100%;
+	font-weight: 400;
+	
+	.promo-content{
+		
+		.promo-title{
+			padding:3px 11px;
+			font-size: 0.750em;
+			text-transform:uppercase;
+			.lh-border-radius(4px);
+			display:inline-block;
+			margin-right:5px;
+			text-align:center;
+		}
+		
+		.promo-inner-content{
+			font-size: 0.813em;
+			.pipe{
+				display:inline-block;
+				margin: 0 10px;
+				padding:0 2px;
+			}
+		}
+	}
+	
+	.banner-color-mix(@bg-color:#F5F5F5,@font-color:#A2A2A2){
+		background-color:@bg-color;
+		border-bottom:1px solid darken(@bg-color,10%);
+		color:@font-color;
+		
+		.promo-content > .promo-inner-content > .pipe{
+			color:darken(@bg-color,15%);
+		}
+		.promo-content > .promo-inner-content > a{
+			color:@font-color;
+			text-decoration:underline;
+		}	
+		.promo-content > .promo-title{
+			background-color:darken(@bg-color,15%);
+			border:1px solid darken(@bg-color,10%);
+		}
+	}
+	
+	.banner-hover-mix(@bg-color:#F5F5F5,@font-color:#A2A2A2){
+		&:hover{
+			background-color:@bg-color;
+			border-bottom:1px solid darken(@bg-color,10%);
+			color:@font-color;
+			
+			.promo-content > .promo-inner-content > .pipe{
+				color:darken(@bg-color,15%);
+			}
+			
+			.promo-content > .promo-inner-content > a{
+				color:@font-color;
+				text-decoration:underline;
+			}
+			
+			.promo-content > .promo-title{
+				background-color:darken(@bg-color,15%);
+				border:1px solid darken(@bg-color,10%);
+			}
+		}
+	}
+	
+
+	.banner-color-mix;
+
+	&.nrwd-promo-hover-default{
+		.banner-hover-mix;
+	}
+	&.nrwd-promo-alert{
+		.banner-color-mix(@alert-banner-color,#FFFFFF);
+	}
+	&.nrwd-promo-hover-alert{
+		.banner-hover-mix(@alert-banner-color,#FFFFFF);
+	}
+	&.nrwd-promo-info{
+		.banner-color-mix(@info-banner-color,#FFFFFF);
+	}
+	&.nrwd-promo-hover-info{
+		.banner-hover-mix(@info-banner-color,#FFFFFF);
+	}
+	&.nrwd-promo-warning{
+		.banner-color-mix(@warn-banner-color,#FFFFFF);
+	}
+	&.nrwd-promo-hover-warning{
+		.banner-hover-mix(@warn-banner-color,#FFFFFF);
+	}
+	&.nrwd-promo-success{
+		.banner-color-mix(@success-banner-color,#FFFFFF);
+	}
+	&.nrwd-promo-hover-success{
+		.banner-hover-mix(@success-banner-color,#FFFFFF);
+	}	
+}
+
+@media (max-width: @screen-xs-max) {
+    .nrwd-promo{
+    	.promo-content{
+    		.promo-title{}
+    		.promo-inner-content{
+    			display:block;
+    			margin-top:5px;
+    		}
+    	}
+    }
+ }

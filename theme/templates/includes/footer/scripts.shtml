@@ -1,0 +1,2 @@
+<script type="text/javascript" src="../js/production/modernizr.min.js"></script>
+<script type="text/javascript" src="../js/development/theme/lazy-loader.js"></script>
