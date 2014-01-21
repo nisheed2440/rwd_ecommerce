@@ -98,47 +98,55 @@
 	<hr class="nrwd-header-split">	
 </header>
 <main  class="container">
-	
+	<div class="row">
+		<div class="nrwd-error-page col-xs-12 col-md-8 col-md-offset-2">
+			<h1 class="error-page-title">404</h1>
+			<p class="error-page-message">REQUESTED PAGE WAS NOT FOUND ON THIS SERVER</p>
+		</div>
+	</div>	
 </main>
 <footer class="nrwd-footer container">
-	<hr class="nrwd-footer-split">
 	<div class="row">
-		<div class="footer-hygiene col-xs-6 col-sm-3 col-md-3">
-			<ul class="footer-links">
-				<li class="footer-links-header">Can we help?</li>
-				<li><a href="#" title="link">Delivery information</a></li>
-				<li><a href="#" title="link">International delivery</a></li>
-				<li><a href="#" title="link">Returns & refunds</a></li>
-				<li><a href="#" title="link">Where's my order?</a></li>
-				<li><a href="#" title="link">Help</a></li>
-			</ul>
-		</div>
-		<div class="footer-hygiene col-xs-6 col-sm-3 col-md-3">
-			<ul class="footer-links">
-				<li class="footer-links-header">About us</li>
-				<li><a href="#" title="link">Sitemap</a></li>
-				<li><a href="#" title="link">Careers</a></li>
-				<li><a href="#" title="link">Our ethics</a></li>
-				<li><a href="#" title="link">Affiliates</a></li>
-			</ul>
-		</div>
-		<div class="footer-hygiene col-xs-6 col-sm-3 col-md-3">
-			<ul class="footer-links">
-				<li class="footer-links-header">Terms & conditions?</li>
-				<li><a href="#" title="link">Terms & conditions</a></li>
-				<li><a href="#" title="link">Privacy and cookies policy</a></li>
-				<li><a href="#" title="link">Accessibility</a></li>
-			</ul>
-		</div>
-		<div class="footer-hygiene footer-social col-xs-6 col-sm-3 col-md-3">
-			<ul class="footer-links footer-social-links">
-				<li><a href="#"><img  alt="facebook" src="../img/facebook-128-black.png"><span>Facebook</span></a></li>
-				<li><a href="#"><img  alt="facebook" src="../img/twitter-128-black.png"><span>Twitter</span></a></li>
-				<li><a href="#"><img  alt="facebook" src="../img/pinterest-128-black.png"><span>Pinterest</span></a></li>
-				<li><a href="#"><img  alt="facebook" src="../img/youtube-128-black.png"><span>Youtube</span></a></li>
-			</ul>
-			<div class="clearfix"></div>	
-		</div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+			<div class="row">
+				<div class="footer-hygiene col-xs-6 col-sm-4 col-md-3">
+					<ul class="footer-links">
+						<li class="footer-links-header">Can we help?</li>
+						<li><a href="#" title="link">Delivery information</a></li>
+						<li><a href="#" title="link">International delivery</a></li>
+						<li><a href="#" title="link">Returns & refunds</a></li>
+						<li><a href="#" title="link">Where's my order?</a></li>
+						<li><a href="#" title="link">Help</a></li>
+					</ul>
+				</div>
+				<div class="footer-hygiene col-xs-6 col-sm-4 col-md-3">
+					<ul class="footer-links">
+						<li class="footer-links-header">About us</li>
+						<li><a href="#" title="link">Sitemap</a></li>
+						<li><a href="#" title="link">Careers</a></li>
+						<li><a href="#" title="link">Our ethics</a></li>
+						<li><a href="#" title="link">Affiliates</a></li>
+					</ul>
+				</div>
+				<div class="footer-hygiene col-xs-6 col-sm-4 col-md-3">
+					<ul class="footer-links">
+						<li class="footer-links-header">Terms & conditions?</li>
+						<li><a href="#" title="link">Terms & conditions</a></li>
+						<li><a href="#" title="link">Privacy and cookies policy</a></li>
+						<li><a href="#" title="link">Accessibility</a></li>
+					</ul>
+				</div>
+				<div class="footer-hygiene footer-social col-xs-6 col-sm-12 col-md-3">
+					<ul class="footer-links footer-social-links">
+						<li><a href="#"><i class="social social-fb"></i><span>Facebook</span></a></li>
+						<li><a href="#"><i class="social social-tw"></i><span>Twitter</span></a></li>
+						<li><a href="#"><i class="social social-gp"></i><span>Google Plus</span></a></li>
+						<li><a href="#"><i class="social social-yt"></i><span>Youtube</span></a></li>
+					</ul>
+					<div class="clearfix"></div>	
+				</div>
+			</div>
+		</div>		
 	</div>
 	<div class="footer-copyright row">
 		<span>Copyright &copy; 2014</span>
