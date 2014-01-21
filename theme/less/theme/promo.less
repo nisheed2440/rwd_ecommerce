@@ -25,9 +25,9 @@
 		}
 	}
 	
-	.banner-color-mix(@bg-color:#F5F5F5,@font-color:#A2A2A2){
+	.banner-color-mix(@bg-color:#F5F5F5,@font-color:#FFFFFF){
 		background-color:@bg-color;
-		border-bottom:1px solid darken(@bg-color,10%);
+		border-bottom:1px solid darken(@bg-color,20%);
 		color:@font-color;
 		
 		.promo-content > .promo-inner-content > .pipe{
@@ -43,10 +43,10 @@
 		}
 	}
 	
-	.banner-hover-mix(@bg-color:#F5F5F5,@font-color:#A2A2A2){
+	.banner-hover-mix(@bg-color:#F5F5F5,@font-color:#FFFFFF){
 		&:hover{
 			background-color:@bg-color;
-			border-bottom:1px solid darken(@bg-color,10%);
+			border-bottom:1px solid darken(@bg-color,20%);
 			color:@font-color;
 			
 			.promo-content > .promo-inner-content > .pipe{
@@ -66,7 +66,7 @@
 	}
 	
 
-	.banner-color-mix;
+	.banner-color-mix(@default-banner-color);
 
 	&.nrwd-promo-hover-default{
 		.banner-hover-mix;
