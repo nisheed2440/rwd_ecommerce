@@ -1,0 +1,59 @@
+.boundary-top {
+	position:static;
+}
+
+.boundary-bottom {
+	position:relative;
+	top:0;
+	bottom:auto;
+}
+
+.fixed-top {
+	position:fixed;
+	top:0;
+	bottom:auto;
+}
+
+.fixed-bottom {
+	position:fixed;
+	top:auto;
+	bottom:0;
+}
+
+.hung {
+	position:relative;
+	top:auto;
+	bottom:auto;
+}
+
+.plp-product{
+	.facet-container, .product-grid {
+		min-height: 1px;
+		position: relative;
+	}
+	.facet-container{
+		width:300px;
+		margin:56px 20px 0 0;
+		padding:0;
+		
+		.facet-container-inner{
+			padding:20px 0 10px;
+			height:auto;
+			width:280px;
+		}
+	}
+	
+	.product-grid{
+		width:880px;
+		margin:0;
+		padding:0;
+		
+		.product-grid-contents{
+			width:880px;	
+			margin:0;
+			padding:0;
+		}
+	}
+}
+
+
