@@ -15,10 +15,10 @@
 	</div>
 </div>
 
-<header class="nrwd-header container">
+<header class="nrwd-header">
 	<div class="row">
 		<div class="header-logo  col-xs-12 col-md-2 col-md-offset-0 ">
-			<a href="#"><img class="img-responsive" alt="NRWD LOGO" src="../img/MyntraLogo.png"></a>
+			<a href="#nrwd-main-menu"><img class="img-responsive" alt="NRWD LOGO" src="../img/MyntraLogo.png"></a>
 		</div>	
 		<div class="header-links text-center col-xs-12 col-sm-3 col-sm-push-9 col-md-5 col-md-push-5">
 			<ul class="nav nav-pills">
@@ -95,9 +95,10 @@
 		</div>
 	</div>
 	<div class="clearfix"></div>
+	<!--#include virtual="includes/components/main-nav.shtml" -->
 	<hr class="nrwd-header-split">	
 </header>
-<main  class="container">
+<main  class="nrwd-main">
 	<div class="row">
 		<div class="nrwd-error-page col-xs-12 col-md-8 col-md-offset-2">
 			<h1 class="error-page-title">404</h1>
@@ -105,7 +106,7 @@
 		</div>
 	</div>	
 </main>
-<footer class="nrwd-footer container">
+<footer class="nrwd-footer">
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
 			<div class="row">

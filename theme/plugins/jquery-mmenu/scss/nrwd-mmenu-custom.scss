@@ -1,0 +1,481 @@
+@import "inc/variables";
+
+$menu-bg						:#fafafa;
+$menu-bg-highlight				:#dddddd;
+$theme-highlight-color	 		:#F1713B;
+$theme-highlight-color-dark		:#d1480f;
+
+$theme-highlight-color-2 		:#AC489D;
+$theme-highlight-color-2-dark 	:#76316c;
+
+$theme-highlight-color-3 		:#EA433D;
+$theme-highlight-color-3-dark 	:#c51b15;
+
+$theme-highlight-color-4    	:#19B5EF;
+$theme-highlight-color-4-dark	:#0c83af;
+
+$theme-highlight-color-5 		:#69A651;
+$theme-highlight-color-5-dark 	:#487338;
+
+$font-color:#000000;
+$font-color-highlight:#FFFFFF;
+
+//	Animations
+html.mm-opened
+{
+	.mm-page,
+	#mm-blocker,
+	.mm-fixed-top,
+	.mm-fixed-bottom,
+	.mm-menu.mm-horizontal > .mm-panel
+	{
+		@include vendor-prefix( "transition", none $transitionDuration $transitionFunction );
+
+		// border is needed to force transitionend event even if no other value changed
+		@include vendor-prefix( "transition-property", ( top, right, bottom, left, border ) );
+	}
+	.mm-page,
+	#mm-blocker
+	{
+		left: 0%;
+		top: 0;
+		margin: 0;
+		border: 0px solid rgba( 0, 0, 0, 0 );
+	}
+	
+	&.mm-opening
+	{
+		.mm-page,
+		#mm-blocker
+		{
+			border: 0px solid rgba( 100, 100, 100, 0 );
+		}
+	}
+}
+
+//	Generic classes
+.mm-menu .mm-hidden
+{
+	display: none;
+}
+
+//	Fixed elements
+.mm-fixed-top,
+.mm-fixed-bottom
+{
+	position: fixed;
+	left: 0;
+}
+.mm-fixed-top
+{
+	top: 0;
+}
+.mm-fixed-bottom
+{
+	bottom: 0;
+}
+
+
+
+//	Menu, submenus, items
+html.mm-opened .mm-page,
+.mm-menu > .mm-panel
+{
+	@include vendor-prefix( "box-sizing", border-box );
+}
+
+// html/body
+html.mm-opened,
+html.mm-opened body
+{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+// page + blocker
+html.mm-opened .mm-page
+{
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+}
+html.mm-background .mm-page
+{
+	background: inherit;
+}
+#mm-blocker
+{
+	background: #fff;
+	opacity: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 999999;
+}
+html.mm-opened #mm-blocker,
+html.mm-blocking #mm-blocker
+{
+	display: block;
+}
+
+// menu
+.mm-menu.mm-current
+{
+	display: block;
+}
+.mm-menu
+{
+	background: inherit;
+	display: none;
+	overflow: hidden;
+	height: 100%;
+	padding: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	
+	> .mm-panel
+	{
+		background: inherit;
+	
+		-webkit-overflow-scrolling: touch;
+		overflow: scroll;
+		overflow-x: hidden;
+		overflow-y: auto;
+	
+		width: 100%;
+		height: 100%;
+		padding: $padding * 2;
+		position: absolute;
+		top: 0;
+		left: 100%;
+		z-index: 0;
+		
+		&.mm-opened
+		{
+			left: 0%;
+		}
+		&.mm-subopened
+		{
+			left: -$subOffset;
+		}
+		&.mm-highest
+		{
+			z-index: 1;
+		}
+		&.mm-hidden
+		{
+			display: block;
+			visibility: hidden;
+		}
+	}
+}
+
+//	Lists
+.mm-menu
+{
+	.mm-list
+	{
+		padding: ( $btnSize / 2 ) 0;
+	}
+	> .mm-list
+	{
+		padding: 0 0 $btnSize 0;
+	}
+}
+.mm-panel > .mm-list
+{
+	margin-left: -( $padding * 2 );
+	margin-right: -( $padding * 2 );
+	
+	&:first-child
+	{
+		padding-top: 0;
+	}
+}
+
+.mm-list,
+.mm-list > li
+{
+	list-style: none;
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+.mm-list
+{
+	font: inherit;
+	font-size: $fontSize;
+
+	a,
+	a:hover
+	{
+		text-decoration: none;
+	}
+
+	> li
+	{
+		position: relative;
+
+		> a,
+		> span
+		{
+			@include ellipsis;
+			color: inherit;
+			line-height: $btnSize - ( $padding * 2 );
+			display: block;
+			padding: $padding $padding $padding ( $padding * 2 );
+			margin: 0;
+			text-transform:uppercase;
+			font-size:15px;
+			font-weight:400;
+		}
+		em.mm-counter{
+			position: absolute;
+			right: 40px;
+			padding: 10px;
+			line-height: 20px;
+		}
+		
+	}
+	
+	> li:not(.mm-subtitle):not(.mm-label):not(.mm-noresults)
+	{
+		@include border-bottom;
+		&:after
+		{
+			width: auto;
+			margin-left: 0;
+			position: relative;
+			left: auto;
+		}
+	}
+
+	// subopen/close
+	a.mm-subopen
+	{
+		@include border-left;
+
+		width: $btnSize;
+		height: 100%;
+		padding: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 2;
+		
+		&.mm-fullsubopen
+		{
+			width: 100%;
+			
+			&:before
+			{
+				border-left: none;
+			}
+		}
+
+		+ a,
+		+ span
+		{
+			padding-right: ( $padding / 2 );
+			margin-right: $btnSize;
+		}
+	}
+
+	> li.mm-selected
+	{
+		color:$font-color-highlight;
+		border-top:1px solid $theme-highlight-color-2-dark;
+		
+		> a.mm-subopen
+		{
+			background: $theme-highlight-color-2;
+		}
+		
+		>em.mm-counter{
+			color:$font-color-highlight;
+		}
+		
+		> a.mm-fullsubopen
+		{
+			+ a,
+			+ span
+			{
+				padding-right: $btnSize + ( $padding / 2 );
+				margin-right: 0;
+			}
+		}
+		
+		&:before{
+			
+		}
+	}
+	
+	a.mm-subclose
+	{
+		text-indent: $btnSize - ( $padding * 2 );
+		font-size: 25px;
+		font-style: italic;
+	}
+
+	// Labels
+	$labelSize: ( $btnSize / 2 ) + ( $padding / 2 );
+	> li.mm-label
+	{
+		@include ellipsis;
+		font-size: 10px;
+		text-transform: uppercase;
+		text-indent: $padding * 2;
+		line-height: $labelSize;
+		padding-right: $padding / 2;
+	}
+
+	// Spacers
+	> li.mm-spacer
+	{
+		padding-top: $btnSize;
+		
+		&.mm-label
+		{
+			padding-top: $labelSize;
+		}
+	}
+
+	// Arrows
+	a.mm-subopen:after,
+	a.mm-subclose:before
+	{
+		@include arrow;
+	}
+	a.mm-subopen:after
+	{
+		@include arrow-next;
+		right: 18px;
+	}
+	a.mm-subclose:before
+	{
+		@include arrow-prev;
+		margin-bottom: -5;
+		left: 22px;
+	}
+}
+
+// vertical submenu
+.mm-menu.mm-vertical .mm-list
+{
+	.mm-panel
+	{
+		display: none;
+		padding: $padding 0 $padding $padding;
+		
+		li:last-child:after
+		{
+			border-color: transparent;
+		}
+	}
+	li.mm-opened > .mm-panel
+	{
+		display: block;
+	}
+	> li.mm-opened > a.mm-subopen
+	{
+		height: $btnSize;
+		&:after
+		{
+			@include vendor-prefix( "transform", rotate( 45deg ) );
+			top: 16px;
+			right: 16px;
+		}
+	}
+}
+
+@include colors;
+@include sizing;
+
+@include colors(".mm-menu",$menu-bg,"",$font-color,$font-color-highlight,$theme-highlight-color-2,$theme-highlight-color-2,$menu-bg-highlight);
+
+//	Bugfix for browsers without support for overflowscrolling
+//		- Android < 3
+
+html.mm-nooverflowscrolling.mm-opened
+{
+	height: auto;
+	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+	body
+	{
+		overflow: auto;
+	}
+	.mm-page
+	{
+		min-height: 1000px;
+		position: fixed;
+	}
+	.mm-menu
+	{
+		height: auto;
+		min-height: 1000px;
+		overflow: auto;
+		overflow-x: hidden;
+		position: relative;
+		left: auto;
+		top: auto;
+	}
+	> .mm-panel
+	{
+		position: relative;
+		height: auto;
+		display: none;
+		left: 0;
+		
+		&.mm-current
+		{
+			display: block;
+		}
+	}
+}
+
+
+.mm-menu.mm-menu {
+	.mm-list
+	{
+		.mm-menu-main-header{
+			color: #fff;
+			font-size: 25px;
+			font-style: italic;
+			padding: 10px 10px 10px 20px;
+			font-weight: 400;
+			line-height: 20px;
+			text-overflow: ellipsis;
+			text-transform: uppercase;
+			white-space: nowrap;
+			background-color:$theme-highlight-color-2;
+			&:after{
+				border-color:transparent;
+			}
+		}
+	
+		>li{
+			>a.mm-subopen:after {
+				border-color:$theme-highlight-color-2;
+			}
+		}
+		>li.mm-selected{
+			>a.mm-subopen{
+				height:40px;
+				&:after{
+					border-color:$font-color-highlight;
+				}
+				&:before{
+					border-color:$theme-highlight-color-2-dark;
+				}
+			}
+		}
+	}
+}	

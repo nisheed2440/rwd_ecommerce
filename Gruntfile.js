@@ -60,26 +60,47 @@ module.exports = function(grunt) {
           dest: 'theme/css/<%= pkg.name %>.min.css'
         },
         theme: {
-          src: ['theme/less/theme/theme.less'],
+          src: ['theme/less/theme/theme.less','theme/css/nrwd-mmenu.css'],
           dest: 'theme/css/<%= pkg.name %>-theme.css'
         },
         theme_min: {
           options: {
             compress: true
           },
-          src: ['theme/less/theme/theme.less'],
+          src: ['theme/less/theme/theme.less','theme/css/nrwd-mmenu.min.css'],
           dest: 'theme/css/<%= pkg.name %>-theme.min.css'
         }
+      },
+      sass: {
+    	  distExpanded: {                          
+    		  options: {                   
+    			  style: 'expanded'
+    		  },
+    		  files: {                       
+    			  'theme/css/nrwd-mmenu.css': 'theme/plugins/jquery-mmenu/scss/nrwd-mmenu-custom.scss'
+    		  }
+    	  },
+    	  distMinified: {                          
+    		  options: {                   
+    			  style: 'compressed'
+    		  },
+    		  files: {                       
+    			  'theme/css/nrwd-mmenu.min.css': 'theme/plugins/jquery-mmenu/scss/nrwd-mmenu-custom.scss'
+    		  }
+    	  }
       }
-    
+
   });
 
-  // Load the plugin that provides the "uglify" task.
+  // Load the plugins.
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-recess');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  
 
   // Default task(s).
   grunt.registerTask('default', ['concat','uglify','recess']);
+  grunt.registerTask('scss', ['sass','recess']);
 
 };

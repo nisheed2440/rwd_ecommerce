@@ -1,0 +1,45 @@
+<nav id="nrwd-main-menu" class="nrwd-main-menu">
+	<ul>
+		<li class="mm-menu-main-header">categories</li>
+		<li>
+			<a href="#" title="link">new arrivals</a>
+			<ul>
+				<li>
+					<a href="#" title="link">men</a>
+					<ul>
+						<li><a href="#" title="link">clothing</a></li>
+						<li><a href="#" title="link">shoes</a></li>
+						<li><a href="#" title="link">accessories</a></li>
+						<li><a href="#" title="link">view all</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" title="link">women</a>
+					<ul>
+						<li><a href="#" title="link">clothing</a></li>
+						<li><a href="#" title="link">shoes</a></li>
+						<li><a href="#" title="link">accessories</a></li>
+						<li><a href="#" title="link">view all</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" title="link">featured</a>
+					<ul>
+						<li><a href="#" title="link">adidas</a></li>
+						<li><a href="#" title="link">puma</a></li>
+						<li><a href="#" title="link">rebook</a></li>
+						<li><a href="#" title="link">levies</a></li>
+						<li><a href="#" title="link">wrangler</a></li>
+						<li><a href="#" title="link">view all</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="#" title="link">men</a></li>
+		<li><a href="#" title="link">women</a></li>
+		<li><a href="#" title="link">accessories</a></li>
+		<li><a href="#" title="link">kids</a></li>
+		<li><a href="#" title="link">brands</a></li>
+		<li><a href="#" title="link">sale</a></li>
+	</ul>
+</nav>

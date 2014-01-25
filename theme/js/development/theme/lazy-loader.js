@@ -20,6 +20,21 @@ Modernizr.load([
 	  load: NRWD.baseJs + 'development/bootstrap/holder.js'
   },
   {
-	  load: NRWD.baseJs + 'production/masonry.pkgd.min.js',
+	  load: '../plugins/hammerjs/hammer.min.js',
+	  complete:function(){
+		  Modernizr.load([
+		                  {
+		                	  load:'../plugins/jquery-mmenu/js/jquery.mmenu.min.all.js',
+		                	  complete:function(){
+		        				  $(function(){
+		        					  $('#nrwd-main-menu').mmenu({
+			        					  classes: "mm-light",
+			        				      zposition: "next",
+			        				      counters: true
+			        				  });
+		        				  });
+		                	  }
+		                  }]);
+	  }
   }
 ]);
