@@ -375,16 +375,16 @@ html.mm-opened.mm-opening .mm-fixed-bottom {
     left: 140px;
   }
 }
-@media all and (min-width: 550px) {
+@media all and (min-width: 425px) {
   .mm-menu {
-    width: 440px;
+    width: 340px;
   }
 
   html.mm-opened.mm-opening .mm-page,
   html.mm-opened.mm-opening #mm-blocker,
   html.mm-opened.mm-opening .mm-fixed-top,
   html.mm-opened.mm-opening .mm-fixed-bottom {
-    left: 440px;
+    left: 340px;
   }
 }
 html.mm-opened.mm-menu .mm-page {
@@ -481,4 +481,35 @@ html.mm-nooverflowscrolling.mm-opened > .mm-panel.mm-current {
 }
 .mm-menu.mm-menu .mm-list > li.mm-selected > a.mm-subopen:before {
   border-color: #76316c;
+}
+.mm-menu.mm-menu .mm-list > li figure.mm-menu-featured-img {
+  position: relative;
+}
+.mm-menu.mm-menu .mm-list > li figure.mm-menu-featured-img > a {
+  display: block;
+  width: 50%;
+  float: left;
+}
+.mm-menu.mm-menu .mm-list > li figure.mm-menu-featured-img > a > img {
+  width: 100%;
+}
+.mm-menu.mm-menu .mm-list > li figure.mm-menu-featured-img figcaption {
+  width: 50%;
+  float: left;
+}
+.mm-menu.mm-menu .mm-list > li figure.mm-menu-featured-img figcaption > ul.mm-list {
+  padding: 0;
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  width: 50%;
+}
+.mm-menu.mm-menu .mm-list > li figure.mm-menu-featured-img figcaption > ul.mm-list > li > a > span {
+  font-size: 25px;
+  float: right;
+  color: #ac489d;
+}
+
+.nrwd-main-menu {
+  display: none;
 }

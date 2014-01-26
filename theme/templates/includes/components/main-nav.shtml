@@ -5,6 +5,21 @@
 			<a href="#" title="link">new arrivals</a>
 			<ul>
 				<li>
+					<figure class="mm-menu-featured-img">
+						<a href="#" title="img title">
+							<img src="../img/categories/new-arrivals.jpg" alt="category image">
+						</a>	
+						<figcaption>
+							<ul>
+								<li><a href="#" title="link">link 1<span>&rarr;</span></a></li>
+								<li><a href="#" title="link">link 2<span>&rarr;</span></a></li>
+								<li><a href="#" title="link">link 3<span>&rarr;</span></a></li>
+							</ul>
+						</figcaption>
+						<div class="clearfix"></div>
+					</figure>
+				</li>
+				<li>
 					<a href="#" title="link">men</a>
 					<ul>
 						<li><a href="#" title="link">clothing</a></li>
@@ -35,8 +50,54 @@
 				</li>
 			</ul>
 		</li>
-		<li><a href="#" title="link">men</a></li>
-		<li><a href="#" title="link">women</a></li>
+		<li>
+			<a href="#" title="link">men</a>
+			<ul>
+				<li>
+					<figure class="mm-menu-featured-img">
+						<a href="#" title="img title"> 
+							<img src="../img/categories/men.jpg" alt="category image">
+						</a>
+						<figcaption>
+							<ul>
+								<li><a href="#" title="link">link 1<span>&rarr;</span></a></li>
+								<li><a href="#" title="link">link 2<span>&rarr;</span></a></li>
+								<li><a href="#" title="link">link 3<span>&rarr;</span></a></li>
+							</ul>
+						</figcaption>
+						<div class="clearfix"></div>
+					</figure>
+				</li>
+				<li><a href="#" title="link">clothing</a></li>
+				<li><a href="#" title="link">shoes</a></li>
+				<li><a href="#" title="link">accessories</a></li>
+				<li><a href="#" title="link">view all</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#" title="link">women</a>
+			<ul>
+				<li>
+					<figure class="mm-menu-featured-img">
+						<a href="#" title="img title"> 
+							<img src="../img/categories/women.jpg" alt="category image">
+						</a>
+						<figcaption>
+							<ul>
+								<li><a href="#" title="link">link 1<span>&rarr;</span></a></li>
+								<li><a href="#" title="link">link 2<span>&rarr;</span></a></li>
+								<li><a href="#" title="link">link 3<span>&rarr;</span></a></li>
+							</ul>
+						</figcaption>
+						<div class="clearfix"></div>
+					</figure>
+				</li>
+				<li><a href="#" title="link">clothing</a></li>
+				<li><a href="#" title="link">shoes</a></li>
+				<li><a href="#" title="link">accessories</a></li>
+				<li><a href="#" title="link">view all</a></li>
+			</ul>
+		</li>
 		<li><a href="#" title="link">accessories</a></li>
 		<li><a href="#" title="link">kids</a></li>
 		<li><a href="#" title="link">brands</a></li>

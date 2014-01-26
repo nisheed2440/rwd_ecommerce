@@ -18,23 +18,19 @@ Modernizr.load([
     }
   },{
 	  load: NRWD.baseJs + 'development/bootstrap/holder.js'
-  },
-  {
-	  load: '../plugins/hammerjs/hammer.min.js',
-	  complete:function(){
-		  Modernizr.load([
-		                  {
-		                	  load:'../plugins/jquery-mmenu/js/jquery.mmenu.min.all.js',
-		                	  complete:function(){
-		        				  $(function(){
-		        					  $('#nrwd-main-menu').mmenu({
-			        					  classes: "mm-light",
-			        				      zposition: "next",
-			        				      counters: true
-			        				  });
-		        				  });
-		                	  }
-		                  }]);
-	  }
   }
 ]);
+
+//Only load the mmenu js when we are in mobile mode.
+if(Modernizr.mq('only all and (max-width: 768px)')){
+	Modernizr.load([
+	                {
+	                	load:'../plugins/jquery-mmenu/js/jquery.mmenu.min.js',
+	                	complete:function(){
+	                		$(function(){
+	                			$('#nrwd-main-menu').mmenu();
+	                		});
+	                	}
+	                }
+	                ]);
+}

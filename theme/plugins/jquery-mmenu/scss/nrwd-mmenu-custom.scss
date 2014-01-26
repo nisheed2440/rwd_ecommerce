@@ -477,5 +477,42 @@ html.mm-nooverflowscrolling.mm-opened
 				}
 			}
 		}
+		
+		>li{
+			figure.mm-menu-featured-img{
+				position:relative;
+				>a{
+					display:block;
+					width:50%;
+					float:left;
+					
+					>img{
+						width:100%;
+					}
+				}
+				
+				figcaption{
+					width:50%;
+					float:left;
+					>ul.mm-list{
+						padding:0;
+						position:absolute;
+						right:0;
+						bottom:-1px;
+						width:50%;
+						
+						>li>a>span{
+							font-size: 25px;
+							float: right;
+							color:$theme-highlight-color-2;
+						}
+					}
+				}
+			}
+		}
 	}
+}
+
+.nrwd-main-menu{
+	display:none;
 }	
