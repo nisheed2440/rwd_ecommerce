@@ -1,0 +1,49 @@
+@main-nav-link-font-color:#696969;
+.nrwd-main-menu{
+	>ul{
+		margin:5px 0 0 0;
+		padding:0;
+		height:30px;
+		text-align:center;
+	}
+	>ul>li{
+			display:inline-block;
+			list-style:none;
+			
+			&:hover{
+				border-bottom:4px solid @theme-highlight-color-2;
+			}
+			
+			&.mm-menu-main-header{
+				display:none;
+			}
+			//Main navigation list item links
+			>a{
+				display:block;
+				height:30px;
+				padding:0 10px;
+				line-height: 30px;
+				text-decoration:none;
+				color:@main-nav-link-font-color;
+				text-transform:uppercase;
+				font-weight:700;
+				font-size:17px;
+				&:hover{
+					color: @theme-highlight-color-2;
+				}	
+			}
+			
+			//Sub menu
+			>ul{
+				display:none;
+			}
+		}
+		
+	 @media (max-width: @screen-xs-max) {
+		display:none;
+	}
+	 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {      	
+		display:block;
+	}
+	
+}
