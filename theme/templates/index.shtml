@@ -1,17 +1,15 @@
 <!--#include virtual="includes/header.shtml" -->
 	
-<div class="nrwd-promo nrwd-promo-default">
-	<div class="container">
-		<div class="promo-content text-center">
-			<span class="promo-title">special offers</span>
-			<span class="promo-inner-content">
-				FREE DELIVERY
-				<span class="pipe">||</span>
-				SHOPPING NOW @ $30
-				<span class="pipe">||</span>
-				UK US SPECIALS
-			</span>
-		</div>
+<div class="nrwd-promo nrwd-promo-default row">
+	<div class="promo-content text-center">
+		<span class="promo-title">special offers</span>
+		<span class="promo-inner-content">
+			FREE DELIVERY
+			<span class="pipe">||</span>
+			SHOPPING NOW @ $30
+			<span class="pipe">||</span>
+			UK US SPECIALS
+		</span>
 	</div>
 </div>
 
@@ -149,7 +147,7 @@
 			</div>
 		</div>		
 	</div>
-	<div class="footer-copyright row">
+	<div class="row footer-copyright">
 		<span>Copyright &copy; 2014</span>
 	</div>
 </footer>

@@ -1,8 +1,13 @@
 .nrwd-footer{
-	border-bottom:1px solid darken(@theme-highlight-color-2,10%);
 	background-color:@footer-bg-color;
-	border-top:1px solid @footer-border-top-color;
-
+	>.row{
+		background:@body-background-image;
+		
+		&:first-child{
+			padding:15px 0;
+		}
+	}
+	
 	.footer-hygiene:nth-child(3n){
 		 @media (max-width: @screen-xs-max) {
     		clear:both;
@@ -102,8 +107,7 @@
 	.footer-copyright{
 		border-top:1px solid darken(@theme-highlight-color-2,10%);
 		padding:5px 15px;
-		margin-top:15px;
 		color:#FFFFFF;
-		background-color:@theme-highlight-color-2;
+		background:@theme-highlight-color-2;
 	}
 }

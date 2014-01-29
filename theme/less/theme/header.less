@@ -1,9 +1,14 @@
 .nrwd-header{
-	margin-top:7px;
-	margin-bottom:7px;
-	@dropdown-bg: #FFFFFF;
+	@dropdown-bg: transparent;
+	@dropdown-bg-selected: #FFFFFF;
+	
 	@dropdown-border-color-open:#ccc;
 	@dropdown-text-color:#333333;
+	
+	>.row{
+		padding:7px 0;
+		background:@body-background-image;
+	}
 	
 	.header-logo{
 		a > img{
@@ -59,7 +64,7 @@
 			border-top:1px solid   @dropdown-border-color-open;
 			border-right:1px solid @dropdown-border-color-open;
 			border-left:1px solid  @dropdown-border-color-open;
-			background-color:@dropdown-bg;
+			background-color:@dropdown-bg-selected;
 			
 			.glyphicon{
 				color:@theme-highlight-color-2;
@@ -123,8 +128,7 @@
 	}
 	
 	.nrwd-header-split{
-		margin-top: 4px;
-		margin-bottom: 10px;
+		margin:4px -10px 10px -10px;
 	}
 }
 
