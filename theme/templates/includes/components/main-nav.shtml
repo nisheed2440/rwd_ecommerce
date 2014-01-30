@@ -1,11 +1,11 @@
-<nav id="nrwd-main-menu" class="nrwd-main-menu">
+<nav id="nrwd-main-menu" class="row nrwd-main-menu">
 	<ul>
 		<li class="mm-menu-main-header">categories</li>
 		<li>
 			<a href="#" title="link">new arrivals</a>
 			<ul>
-				<li>
-					<figure class="mm-menu-featured-img">
+				<li class="mm-menu-featured-img">
+					<figure>
 						<img src="../img/categories/new-arrivals.jpg" alt="category image">	
 						<figcaption>
 							<ul>
@@ -43,6 +43,33 @@
 						<li><a href="#" title="link">rebook</a></li>
 						<li><a href="#" title="link">levies</a></li>
 						<li><a href="#" title="link">wrangler</a></li>
+						<li><a href="#" title="link">view all</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" title="link">women</a>
+					<ul>
+						<li><a href="#" title="link">clothing</a></li>
+						<li><a href="#" title="link">shoes</a></li>
+						<li><a href="#" title="link">accessories</a></li>
+						<li><a href="#" title="link">view all</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" title="link">women</a>
+					<ul>
+						<li><a href="#" title="link">clothing</a></li>
+						<li><a href="#" title="link">shoes</a></li>
+						<li><a href="#" title="link">accessories</a></li>
+						<li><a href="#" title="link">view all</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" title="link">women</a>
+					<ul>
+						<li><a href="#" title="link">clothing</a></li>
+						<li><a href="#" title="link">shoes</a></li>
+						<li><a href="#" title="link">accessories</a></li>
 						<li><a href="#" title="link">view all</a></li>
 					</ul>
 				</li>
