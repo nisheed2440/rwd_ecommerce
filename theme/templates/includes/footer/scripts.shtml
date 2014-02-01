@@ -1,2 +1,2 @@
 <script type="text/javascript" src="../js/production/modernizr.min.js"></script>
-<script type="text/javascript" src="../js/development/theme/script-loader.js"></script>
+<script type="text/javascript" src="../js/development/theme/nrwd-script-loader.js"></script>

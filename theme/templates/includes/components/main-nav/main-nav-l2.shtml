@@ -1,0 +1,15 @@
+<ul class="mm-l2">
+	<li class="mm-l2-header">Shop by:</li>
+	<li class="mm-l2-cat">
+		<a class="mm-l2-cat-link" href="#" title="link">categories</a>
+		<!--#include virtual="main-nav-l3.shtml" -->
+	</li>
+	<li class="mm-l2-cat">
+		<a class="mm-l2-cat-link" href="#" title="link">top brands</a>
+		<!--#include virtual="main-nav-l3.shtml" -->
+	</li>
+	<li class="mm-l2-cat">
+		<a class="mm-l2-cat-link" href="#" title="link">sale</a>
+		<!--#include virtual="main-nav-l3.shtml" -->
+	</li>
+</ul>

@@ -37,18 +37,33 @@ Modernizr.load([
                 }
                 ]);
 
-//Only load the mmenu js when we are in mobile mode.
-if(Modernizr.mq('only all and (max-width: 768px)')){
+//Load touch based js if browser supports touch
+if(Modernizr.touch === true){
 	Modernizr.load([
 	                {
-	                	load:'../plugins/jquery-mmenu/js/jquery.mmenu.min.js',
+	                	//Hammerjs loaded
+	                	load:'../plugins/hammerjs/hammer.min.js',
 	                	complete:function(){
-	                		$(function(){
-	                			$('#nrwd-main-menu')
-	                			.mmenu()
-	                			.removeClass('nrwd-main-menu');
-	                		});	
+	                		
+	                		//Only load the mmenu js when we are in mobile mode.
+	                		if(Modernizr.mq('only all and (max-width: 768px)')){
+	                			Modernizr.load([
+	                			                {
+	                			                	load:'../plugins/jquery-mmenu/js/jquery.mmenu.min.js',
+	                			                	complete:function(){
+	                			                		$(function(){
+	                			                			$('#nrwd-mm')
+	                			                			.mmenu()
+	                			                			.removeClass('nrwd-mm row');
+	                			                		});
+	                			                	}
+	                			                }
+	                			                ]);
+	                		}
 	                	}
+	                },
+	                {
+	                	load: NRWD.baseJs + 'development/theme/nrwd-gesture-control.js'
 	                }
 	                ]);
 }

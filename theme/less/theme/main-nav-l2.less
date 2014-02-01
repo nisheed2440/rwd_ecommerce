@@ -1,0 +1,109 @@
+@mm-l2-bg-color:#FFFFFF;
+@mm-l2-border-color:#efefef;
+@mm-l2-link-color:#999999;
+@mm-l2-link-highlight-color:@theme-highlight-color-2;
+@mm-l2-header-color:#cccccc;
+
+.mm-l2{
+	display:none;
+	
+	position:absolute;
+	left:0;
+	padding:0;
+	width:100%;
+	background:@mm-l2-bg-color;
+	
+	
+	z-index:998;
+	>li{
+		display:inline-block;
+		list-style:none;
+		
+		&:last-child{
+			clear:both;
+		}
+	}
+	
+	.mm-l2-header{
+		padding:6px 20px;
+		line-height:24px;
+		text-transform:uppercase;
+		color:@mm-l2-header-color;
+	}
+	.mm-l2-cat{
+		.mm-l2-cat-link{
+			display:block;
+			padding:8px 20px;
+			line-height:24px;
+			text-transform:uppercase;
+			color:@mm-l2-link-color;
+			text-decoration:none;
+			
+		}
+		
+		.pointer-mixin{
+			bottom: -1px;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+		}
+		
+		//When browser supports touch, set by Modernizer
+		html.no-touch &{
+			&:hover,&.selected{
+				.mm-l2-cat-link{
+					color:@mm-l2-link-highlight-color;
+					position:relative;
+					&:before{
+						.pointer-mixin;
+						border-bottom-color: #ccc;
+						border-width: 10px;
+						left: 50%;
+						margin-left: -10px;
+					}
+					&:after{
+						.pointer-mixin;
+						border-bottom-color: #fbfbfb;
+						border-width: 9px;
+						left: 50%;
+						margin-left: -9px;
+					}
+				}
+				
+				.mm-l3-wrapper{
+					display:block;
+				}
+			}
+		}
+		//When browser does not support touch, set by Modernizer
+		html.touch &{
+			&.selected{
+				.mm-l2-cat-link{
+					color:@mm-l2-link-highlight-color;
+					position:relative;
+					&:before{
+						.pointer-mixin;
+						border-bottom-color: #ccc;
+						border-width: 8px;
+						left: 50%;
+						margin-left: -8px;
+					}
+					&:after{
+						.pointer-mixin;
+						border-bottom-color: #fbfbfb;
+						border-width: 7px;
+						left: 50%;
+						margin-left: -7px;
+					}
+				}
+				
+				.mm-l3-wrapper{
+					display:block;
+				}
+			}
+		}
+	}
+}
