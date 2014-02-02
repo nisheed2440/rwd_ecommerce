@@ -2,6 +2,7 @@
 @mm-l2-border-color:#efefef;
 @mm-l2-link-color:#999999;
 @mm-l2-link-highlight-color:@theme-highlight-color-2;
+@mm-l2-link-highlight-bg-color:#fbfbfb;
 @mm-l2-header-color:#cccccc;
 
 .mm-l2{
@@ -38,7 +39,7 @@
 			text-transform:uppercase;
 			color:@mm-l2-link-color;
 			text-decoration:none;
-			
+			font-style:italic;
 		}
 		
 		.pointer-mixin{
@@ -55,8 +56,12 @@
 		html.no-touch &{
 			&:hover,&.selected{
 				.mm-l2-cat-link{
+					background-color:@mm-l2-link-highlight-bg-color;
 					color:@mm-l2-link-highlight-color;
 					position:relative;
+					font-weight: bold;
+					font-style: initial;
+					
 					&:before{
 						.pointer-mixin;
 						border-bottom-color: #ccc;
@@ -82,8 +87,12 @@
 		html.touch &{
 			&.selected{
 				.mm-l2-cat-link{
+					background-color:@mm-l2-link-highlight-bg-color;
 					color:@mm-l2-link-highlight-color;
 					position:relative;
+					font-weight: bold;
+					font-style: initial;
+					
 					&:before{
 						.pointer-mixin;
 						border-bottom-color: #ccc;

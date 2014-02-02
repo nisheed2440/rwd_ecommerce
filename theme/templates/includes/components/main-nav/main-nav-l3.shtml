@@ -1,5 +1,6 @@
 <div class="mm-l3-wrapper">
 	<ul class="mm-l3">
+	
 		<li class="mm-l3-header">clothing</li>
 		<li class="mm-l3-cat">
 			<a class="mm-l3-cat-link" href="#" title="link">adidas</a>
@@ -113,5 +114,16 @@
 		<li class="mm-l3-cat">
 			<a class="mm-l3-cat-link" href="#" title="link">tesla</a>
 		</li>
+		
+				
+		<!-- <li class="mm-l3-cat">
+			<figure>
+				<a href=""><img class="img-responsive" alt="image" src="../img/categories/new-arrivals.jpg"></a>
+				<figcaption>
+					Lorem ipsum dolor sit amet
+				</figcaption>
+			</figure>
+		</li> -->
+		
 	</ul>
 </div>

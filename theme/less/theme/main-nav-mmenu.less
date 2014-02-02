@@ -1,0 +1,60 @@
+//MMenu specific css goes here
+&.mm-menu{
+	.mm-list{
+		//Level 1 list 
+		&.mm-l1{
+			.mm-l1-header{
+				background-color:@theme-highlight-color-2;
+				display: block;
+				padding: 10px 10px 10px 20px;
+				margin: 0;
+				overflow: hidden;
+				font-weight: 400;
+				line-height: 20px;
+				text-overflow: ellipsis;
+				text-transform: uppercase;
+				white-space: nowrap;
+				font-size: 25px;
+				font-style: italic;
+				border-bottom:1px solid #ddd;
+				color:#FFFFFF;
+				
+				&:after{
+					border:0;
+				}
+			}
+		}
+		
+		.l2-l3-header-mixin{
+			background-color: #FFF;
+			padding: 10px 10px 10px 20px;
+			color:@theme-highlight-color-2;
+			font-size:18px;
+			border-bottom:1px solid #ddd;
+			text-transform:uppercase;
+			&:after{
+				border:0;
+			}
+		}
+		
+		//Level 2 list
+		&.mm-l2{
+			.mm-l2-header{
+				.l2-l3-header-mixin;
+			}
+		}
+		//Level 3 list
+		&.mm-l3{
+			padding:0;
+			.mm-l3-header{
+				.l2-l3-header-mixin;
+			}
+		}
+	}
+	
+	//Level 3 wrapper
+	.mm-l3-wrapper{	
+		padding-top:0;	
+	}
+}
+
